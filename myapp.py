@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import os
 
 # Set page title
 st.title('My First Streamlit App')
@@ -40,3 +39,6 @@ st.line_chart(chart_data)
 if st.checkbox('Show raw data'):
     st.subheader('Raw Data')
     st.write(chart_data) 
+
+if __name__ == '__main__':     
+    st.set_option('server.enableCORS', True)
