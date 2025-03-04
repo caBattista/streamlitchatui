@@ -39,7 +39,4 @@ st.line_chart(chart_data)
 # Add a checkbox
 if st.checkbox('Show raw data'):
     st.subheader('Raw Data')
-    st.write(chart_data)
-# test
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000))) 
+    st.write(chart_data) 
