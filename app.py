@@ -1,10 +1,8 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
 # Set page title
 st.title('My First Streamlit App')
-
+#*
 # Add a header
 st.header('Welcome to the Demo!')
 
@@ -24,21 +22,6 @@ option = st.selectbox(
     ['Red', 'Green', 'Blue', 'Yellow']
 )
 st.write(f'Your favorite color is {option}')
-
-# Create some sample data
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['A', 'B', 'C']
-)
-
-# Display a line chart
-st.subheader('Line Chart Example')
-st.line_chart(chart_data)
-
-# Add a checkbox
-if st.checkbox('Show raw data'):
-    st.subheader('Raw Data')
-    st.write(chart_data) 
 
 if __name__ == '__main__':     
     st.set_option('server.enableCORS', True)
